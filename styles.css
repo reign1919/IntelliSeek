@@ -497,3 +497,23 @@ p {
 .loader-logo {
     animation: rotate 1s linear forwards; /* Rotate the logo for 1 second */
 }
+
+@media screen and (max-width: 576px) {
+    /* Media query for even smaller screens */
+    .header {
+        display: none; /* Hide header on very small screens */
+    }
+    h1 {
+        font-size: 20px; /* Further reduce heading size for very small screens */
+    }
+    #search-input {
+        width: calc(100% - 120px); /* Make search input almost full width on very small screens */
+        padding: 15px; /* Increase padding for better visibility */
+    }
+    #search-form button {
+        width: 80px; /* Make search button smaller on very small screens */
+        padding: 12px 16px; /* Adjust padding for smaller buttons */
+        font-size: 16px; /* Reduce font size for smaller buttons */
+        margin-top: 10px; /* Add some space between input and button on very small screens */
+    }
+}
