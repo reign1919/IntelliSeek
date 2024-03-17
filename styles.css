@@ -1,0 +1,499 @@
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background color */
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark background */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: calc(100% - 120px); /* Adjusted width to accommodate the search button */
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3) inset;
+}
+
+.search-container button {
+    width: 100px; /* Adjusted width for the search button */
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #4CAF50; /* Green button color */
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.search-container input[type="text"]::placeholder {
+    color: #999; /* Light gray placeholder text */
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+.result {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background for results */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.result h3 {
+    margin-top: 0;
+}
+
+.result p {
+    margin-bottom: 10px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Additional styles */
+a {
+    color: #4CAF50; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #45a049; /* Darker green on hover */
+}
+
+.button-secondary {
+    background-color: #333; /* Dark button color */
+    border: 1px solid #4CAF50; /* Green border */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-secondary:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: #fff;
+}
+
+/* More styles */
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.button-primary {
+    background-color: #4CAF50; /* Green button color */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-primary:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Styles for full-width search container */
+.full-width-search {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.gcse-search {
+    width: 100%;
+}
+
+#search-input {
+    width: 300px; /* Adjust width as needed */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow */
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+#search-input:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #007bff; /* Border color on focus */
+}
+
+#search-form button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #007bff; /* Button background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Adjust font size as needed */
+    cursor: pointer; /* Cursor style */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+#search-form button:hover {
+    background-color: #5976c5a0; /* Button background color on hover */
+}
+
+/* Additional styles */
+.result a {
+    color: #4CAF50; /* Link color for search results */
+}
+
+.result a:hover {
+    color: #45a049; /* Darker green on hover for search result links */
+}
+
+/* More styles */
+.result-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Styles for full-width search container */
+.full-width-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gcse-search {
+    width: 100%;
+}
+
+#search-input {
+    max-width: 100%; /* Adjust width as needed */
+    width: auto;
+}
+
+#search-form {
+    display: flex;
+    align-items: center;
+}
+
+#search-form input[type="text"] {
+    flex: 1; /* Expand input to fill remaining space */
+}
+
+#search-form button {
+    margin-left: 10px; /* Add some space between input and button */
+}
+
+/* Additional styles */
+.footer p {
+    margin: 0; /* Remove default margin from footer paragraph */
+}
+
+/* More styles */
+.container {
+    position: relative; /* Enable absolute positioning for child elements */
+}
+
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo-text {
+    font-weight: bold; /* Make logo text bold */
+}
+
+.header img {
+    border-radius: 50%; /* Make the logo image round */
+}
+
+@media screen and (max-width: 768px) {
+    /* Media query for smaller screens */
+    .container {
+        padding: 10px; /* Adjust container padding for smaller screens */
+    }
+    .header {
+        top: 10px; /* Adjust header position for smaller screens */
+        left: 10px; /* Adjust header position for smaller screens */
+    }
+    .logo {
+        width: 40px; /* Adjust logo size for smaller screens */
+        height: 40px; /* Adjust logo size for smaller screens */
+    }
+    .logo-text {
+        font-size: 20px; /* Adjust logo text size for smaller screens */
+    }
+    h1 {
+        font-size: 28px; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Media query for even smaller screens */
+    .header {
+        display: none; /* Hide header on very small screens */
+    }
+    h1 {
+        font-size: 24px; /* Further reduce heading size for very small screens */
+    }
+    #search-input {
+        width: 100%; /* Make search input full width on very small screens */
+    }
+    #search-form button {
+        width: 100%; /* Make search button full width on very small screens */
+        margin-top: 10px; /* Add some space between input and button on very small screens */
+    }
+}
+
+/* Additional styles */
+@media screen and (max-width: 768px) {
+    /* Media query for smaller screens */
+    .container {
+        padding: 10px; /* Adjust container padding for smaller screens */
+    }
+    .header {
+        padding: 10px; /* Adjust header padding for smaller screens */
+    }
+    .logo {
+        width: 40px; /* Adjust logo size for smaller screens */
+        height: 40px; /* Adjust logo size for smaller screens */
+    }
+    .logo-text {
+        font-size: 18px; /* Adjust logo text size for smaller screens */
+    }
+    h1 {
+        font-size: 24px; /* Adjust heading size for smaller screens */
+    }
+    #search-input {
+        width: calc(100% - 60px); /* Adjust width of search input for smaller screens */
+    }
+    #search-form button {
+        width: 60px; /* Adjust width of search button for smaller screens */
+        margin-top: 10px; /* Add some space between input and button on smaller screens */
+    }
+    .result {
+        padding: 15px; /* Adjust padding of search result containers for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    /* Media query for even smaller screens */
+    .header {
+        display: none; /* Hide header on very small screens */
+    }
+    h1 {
+        font-size: 20px; /* Further reduce heading size for very small screens */
+    }
+    #search-input {
+        width: 100%; /* Make search input full width on very small screens */
+    }
+    #search-form button {
+        width: 100%; /* Make search button full width on very small screens */
+        margin-top: 10px; /* Add some space between input and button on very small screens */
+    }
+}
+
+/* Additional styles */
+/* Hover animation for header */
+.header:hover {
+    background-color: #444; /* Darken header background color on hover */
+}
+
+/* Hover animation for search button */
+#search-form button:hover {
+    background-color: #0056b3; /* Darker blue background color on hover */
+    color: #fff; /* Change text color on hover */
+    transform: translateY(-2px); /* Move button slightly up on hover */
+}
+
+/* Hover animation for search result containers */
+.result:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add stronger shadow on hover for depth effect */
+    transform: scale(1.02); /* Scale up search result container on hover */
+}
+
+/* Hover animation for footer */
+.footer:hover {
+    background-color: #444; /* Darken footer background color on hover */
+}
+
+/* Loader Screen Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure loader appears on top of other content */
+}
+
+.loader-logo {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+}
+
+.loader-text {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Hide content while loader is visible */
+.container {
+    display: none;
+}
+
+/* Additional Styles */
+/* Add animation to the loader logo */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loader-logo {
+    animation: rotate 2s linear infinite; /* Rotate the logo continuously */
+}
+/* Loader Screen Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure loader appears on top of other content */
+}
+
+.loader-logo {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+}
+
+.loader-text {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Hide content while loader is visible */
+.container {
+    display: none;
+}
+
+/* Additional Styles */
+/* Add animation to the loader logo */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loader-logo {
+    animation: rotate 1s linear forwards; /* Rotate the logo for 1 second */
+}
+/* Loader Screen Styles */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure loader appears on top of other content */
+}
+
+.loader-logo {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+}
+
+.loader-text {
+    color: #fff;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* Hide content while loader is visible */
+.container {
+    display: none;
+}
+
+/* Additional Styles */
+/* Add animation to the loader logo */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.loader-logo {
+    animation: rotate 1s linear forwards; /* Rotate the logo for 1 second */
+}

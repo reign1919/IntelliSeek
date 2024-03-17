@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/nolan/64/king.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="loader">
+        <img src="https://img.icons8.com/nolan/64/king.png" alt="Logo" class="loader-logo">
+        <div class="loader-text">DEV-REIGN</div>
+    </div>
+    <div class="container">
+        <div class="header">
+            <img src="https://img.icons8.com/nolan/64/king.png" alt="Logo" class="logo">
+            <div class="logo-text">DEV-REIGN</div>
+        </div>
+        <h1>IntelliSeek</h1>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button type="submit" id="search-button">Search</button> <!-- Added ID for the search button -->
+        </form>
+        <div id="results"></div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 IntelliSeek | Created by DEV-REIGN</p>
+    </footer>
+    <script>
+                $(window).on("load", function() {
+            // Hide the loader
+            $(".loader").fadeOut("slow");
+            // Show the content
+            $(".container").fadeIn("slow");
+        });
+        const apiKey = 'AIzaSyBv4XqWg5hS2tgI3ih-dZUgT7s1FIlsxTY';
+        const searchEngineId = '5629b48a1d948466b';
+
+        $('#search-form').on('submit', function(e) {
+            e.preventDefault();
+            const query = $('#search-input').val();
+            fetchSearchResults(query);
+        });
+
+        function fetchSearchResults(query) {
+            const url = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${searchEngineId}&q=${query}`;
+            $.getJSON(url, function(data) {
+                displaySearchResults(data.items);
+            });
+        }
+
+        function displaySearchResults(results) {
+            let html = '';
+            results.forEach(function(result) {
+                html += `<div class="result">
+                            <a href="${result.link}">${result.title}</a>
+                            <p>${result.snippet}</p>
+                        </div>`;
+            });
+            $('#results').html(html);
+        }
+    </script>
+</body>
+</html>
